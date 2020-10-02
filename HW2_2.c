@@ -25,10 +25,11 @@ int main(int argc, char *argv[])
 	char write_in_data='A';
 	
 	sscanf(argv[1], "%d",&memory_byte);
-	//printf("%d\n",memory_byte);
+	
 	
     pointer = (char*)malloc(  sizeof(char) * (memory_byte)  ) ;
 	pointer2 = (int*)malloc(  sizeof(int) * (memory_byte)  ) ;
+	
 	for (i=0;i<memory_byte;i++)
 	{
 		*(pointer+i)=write_in_data;
@@ -39,12 +40,19 @@ int main(int argc, char *argv[])
 		//printf("%c\n",*(pointer+i));
 		
 	}
+	
 	do
 	{
-		*(pointer2+j) = *(pointer+j);
+		*(pointer2+j) = *(pointer+j)-1;
 		printf("%d\n",*(pointer2+j));
 		j++;
 	}
 	while(j<memory_byte);
+	
 	return 0;
+	
+	
 }
+
+
+
