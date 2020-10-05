@@ -43,14 +43,16 @@ int main(int argc, char *argv[])
 	
 	do
 	{
-		*(pointer2+j) = *(pointer+j)-1;
+		*(pointer2+j) = *(pointer+j);
 		printf("%d\n",*(pointer2+j));
+		printf("after subtract 1 \n");
+		printf("%d\n",*(pointer2+j)-1);
+		printf("-----------------\n");
 		j++;
 	}
 	while(j<memory_byte);
 	
 	return 0;
-	
 	
 }
 

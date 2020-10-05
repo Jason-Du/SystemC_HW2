@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<stdlib.h>
 #define TEXT_SIZE 100
-void calculate(char filename[20])
+void calculate(char* filename)
 {
 	 int upper;
 	 int lines;
@@ -98,8 +98,8 @@ void makefile(char filename[20])
 }
  int main(int argc, char *argv[]) 
  {
-	calculate(argv[2]);
-	makefile(argv[2]);
+	calculate(argv[1]);
+	makefile(argv[1]);
 	return 0;
 	
  }
