@@ -52,7 +52,7 @@ void calculate(char* filename)
 	}	
 }
 
-void makefile(char filename[20])
+void makefile(char* filename)
 {
 	char s[TEXT_SIZE];
 	char ch;
